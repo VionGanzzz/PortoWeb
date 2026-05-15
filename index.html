@@ -303,43 +303,50 @@
 			justify-content: center;
 			align-items: center;
 			flex-wrap: wrap;
-			gap: 1rem;
+			gap: 1.5rem;
 			padding: 2rem;
 			margin: 3rem 0;
 		}
 
-		.LinkItem {
+		.LinkButton {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			justify-content: center;
 			gap: 0.5rem;
-			transition: all 0.3s ease;
-		}
-
-		.LinkItem a {
-			color: #DDDDDD;
-			text-decoration: none;
-			font-size: clamp(12px, 2vw, 14px);
-			padding: 0.5rem 1rem;
-			border-radius: 6px;
-			transition: all 0.3s ease;
-		}
-
-		.LinkItem a:hover {
-			color: #8EE6DB;
+			padding: 1rem;
+			border-radius: 12px;
 			background: rgba(142, 230, 219, 0.1);
+			border: 2px solid rgba(142, 230, 219, 0.3);
+			text-decoration: none;
+			color: #8EE6DB;
+			transition: all 0.3s ease;
+			cursor: pointer;
+			min-width: 100px;
 		}
 
-		.LinkItem img {
+		.LinkButton:hover {
+			background: rgba(142, 230, 219, 0.2);
+			border-color: rgba(142, 230, 219, 0.6);
+			transform: translateY(-5px);
+			box-shadow: 0 8px 20px rgba(142, 230, 219, 0.3);
+		}
+
+		.LinkButton img {
 			width: 50px;
 			height: 50px;
 			transition: all 0.3s ease;
 			filter: drop-shadow(0 0 8px rgba(142, 230, 219, 0.3));
 		}
 
-		.LinkItem:hover img {
+		.LinkButton:hover img {
 			transform: scale(1.15) rotate(5deg);
 			filter: drop-shadow(0 0 15px rgba(142, 230, 219, 0.6));
+		}
+
+		.LinkButton span {
+			font-size: clamp(12px, 2vw, 14px);
+			font-weight: 500;
 		}
 
 		/* Mobile Responsive */
@@ -377,22 +384,22 @@
 
 			.Links {
 				flex-direction: row;
-				gap: 0.5rem;
+				gap: 1rem;
 				padding: 1rem 0.5rem;
 			}
 
-			.LinkItem {
-				gap: 0.25rem;
+			.LinkButton {
+				min-width: 85px;
+				padding: 0.75rem;
 			}
 
-			.LinkItem img {
+			.LinkButton img {
 				width: 40px;
 				height: 40px;
 			}
 
-			.LinkItem a {
+			.LinkButton span {
 				font-size: 11px;
-				padding: 0.25rem 0.5rem;
 			}
 
 			.ProjectItem {
@@ -453,9 +460,18 @@
 				gap: 0.75rem;
 			}
 
-			.LinkItem img {
+			.LinkButton {
+				min-width: 75px;
+				padding: 0.5rem;
+			}
+
+			.LinkButton img {
 				width: 35px;
 				height: 35px;
+			}
+
+			.LinkButton span {
+				font-size: 10px;
 			}
 
 			.VionImg img {
@@ -480,16 +496,16 @@
 	<div class="Story">
 		<h6></h6>
 		<h2>Who am I?</h2>
-		<p>I am a random guy in the internet who loves doing things such as learning new stuffs like programming, digital or traditional arts, game developing, etc. I like to read interesting stuffs and explore creative possibilities.</p>
+		<p>I am a random guy in the internet who loves doing things such as learning new stuffs like programming, digital or traditional arts, game developing, etc. I like to read interesting stuffs and exp[...]
 		
 		<h2>What is my profession?</h2>
-		<p>I am a 10th grader student right now. So, you don't need to act formal with me. But sometimes I'm looking for a freelance side-job to fill my free time. Sometimes, I also make random projects that challenge my skills.</p>
+		<p>I am a 10th grader student right now. So, you don't need to act formal with me. But sometimes I'm looking for a freelance side-job to fill my free time. Sometimes, I also make random projects tha[...]
 		
 		<h2>What can I do for you?</h2>
-		<p>I can help you with digital illustrations, posters, anime drawing, etc. But please keep in mind that I'm not a professional, especially in designing logos. I can also help with programming and game development projects.</p>
+		<p>I can help you with digital illustrations, posters, anime drawing, etc. But please keep in mind that I'm not a professional, especially in designing logos. I can also help with programming and ga[...]
 		
 		<h2>About me</h2>
-		<p>I was born on 2011 in Indonesia. I started to learn Pascal and digital arts in 3rd grade. Then I started to learn VBA in 4th grade, and I learned more art theories in 6th grade. I learned Python back then and continue exploring multiple programming languages and artistic mediums.</p>
+		<p>I was born on 2011 in Indonesia. I started to learn Pascal and digital arts in 3rd grade. Then I started to learn VBA in 4th grade, and I learned more art theories in 6th grade. I learned Python [...]
 		<h6></h6>
 	</div>
 	
@@ -633,7 +649,7 @@
 				<div class="ProjectItem">
 					<h3>PowerPoint Game</h3>
 					<iframe frameborder="0" src="https://itch.io/embed/3467540?border_width=0&bg_color=262643&fg_color=e8aeea&link_color=f3d213&border_color=282323" width="550" height="165"></iframe>
-					<p>A visual novel + puzzle game I made in PowerPoint + VBA code back then in 9th grade (2024) with 12 endings. Some arts are still unfinished, but it's a complete playable experience with multiple storylines.</p>
+					<p>A visual novel + puzzle game I made in PowerPoint + VBA code back then in 9th grade (2024) with 12 endings. Some arts are still unfinished, but it's a complete playable experience with multipl[...]
 				</div>
 
 				<h6></h6>
@@ -644,34 +660,34 @@
 	<h6></h6>
 
 	<div class="Links">
-		<div class="LinkItem">
-			<a href="#" target="_blank">WhatsApp</a>
+		<a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" class="LinkButton">
 			<img src="Icons/WaCyan.png" alt="WhatsApp">
-		</div>
-		<div class="LinkItem">
-			<a href="#" target="_blank">Instagram</a>
+			<span>WhatsApp</span>
+		</a>
+		<a href="https://instagram.com/YOUR_USERNAME" target="_blank" class="LinkButton">
 			<img src="Icons/IgCyan.png" alt="Instagram">
-		</div>
-		<div class="LinkItem">
-			<a href="#" target="_blank">Art Account</a>
-			<img src="Icons/IgCyan.png" alt="Instagram Art">
-		</div>
-		<div class="LinkItem">
-			<a href="#" target="_blank">Discord</a>
+			<span>Instagram</span>
+		</a>
+		<a href="https://instagram.com/YOUR_ART_ACCOUNT" target="_blank" class="LinkButton">
+			<img src="Icons/IgCyan.png" alt="Art Account">
+			<span>Art Account</span>
+		</a>
+		<a href="https://discord.com/users/YOUR_USER_ID" target="_blank" class="LinkButton">
 			<img src="Icons/DiscordCyan.png" alt="Discord">
-		</div>
-		<div class="LinkItem">
-			<a href="#" target="_blank">Itch.io</a>
+			<span>Discord</span>
+		</a>
+		<a href="https://itch.io/profile/YOUR_USERNAME" target="_blank" class="LinkButton">
 			<img src="Icons/ItchCyan.png" alt="Itch.io">
-		</div>
-		<div class="LinkItem">
-			<a href="#" target="_blank">GitHub</a>
+			<span>Itch.io</span>
+		</a>
+		<a href="https://github.com/VionGanzzz" target="_blank" class="LinkButton">
 			<img src="Icons/GitCyan.png" alt="GitHub">
-		</div>
-		<div class="LinkItem">
-			<a href="#" target="_blank">YouTube</a>
+			<span>GitHub</span>
+		</a>
+		<a href="https://youtube.com/@YOUR_CHANNEL" target="_blank" class="LinkButton">
 			<img src="Icons/YtCyan.png" alt="YouTube">
-		</div>
+			<span>YouTube</span>
+		</a>
 	</div>
 
 	<h6></h6>
